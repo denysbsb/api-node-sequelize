@@ -19,7 +19,8 @@ router.post('/login',function(req, res, next) {
     next(err);
   }
 
-  
-
 });
+
+router.use('/programas', require('./programas'));
+
 module.exports = router;
