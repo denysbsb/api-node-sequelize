@@ -14,10 +14,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(cors());
 
-app.get('/',function(req, res){
-  res.status(201);
-  res.json({'name':'Romulo', 'email': 'wromulo@gmail.com'});
-});
+app.use('/', require('/routes'));
 
 //error handling
 app.use(function(request, response, next) {
